@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h2>{{ title }}</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">{{ title }}</button>
+    </form>
+
+    {% if title == "Register" %}
+        <p>Already registered? <a href="{% url 'login' %}">Login</a></p>
+    {% else %}
+        <p>New user? <a href="{% url 'register' %}">Register</a></p>
+    {% endif %}
+</body>
+</html>

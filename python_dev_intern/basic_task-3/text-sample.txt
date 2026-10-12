@@ -1,0 +1,1 @@
+hello developing word counter programe to demonstare how the words are counted from a file using python as a language.
